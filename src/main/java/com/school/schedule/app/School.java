@@ -37,8 +37,8 @@ public class School {
 
     // Setter Methods
 
-    public void setName( String address ) {
-        this.address = address;
+    public void setName( String name ) {
+        this.name = name;
     }
 
     public void setAddress( String address ) {
