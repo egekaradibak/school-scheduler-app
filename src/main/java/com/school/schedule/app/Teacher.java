@@ -9,7 +9,7 @@ public class Teacher extends Person{
 
     private List<Course> courses;
     private Boolean isFullTime;
-
+    private Schedule schedule;
 
     // Getter Methods
 
@@ -21,6 +21,11 @@ public class Teacher extends Person{
         return isFullTime;
     }
 
+    public Schedule getSchedule() {
+        return schedule;
+    }
+
+
     // Setter Methods
 
     public void setCourses( List<Course> courses ) {
@@ -30,4 +35,9 @@ public class Teacher extends Person{
     public void setIsFullTime( Boolean isFullTime ) {
         this.isFullTime = isFullTime;
     }
+
+    public void setSchedule( Schedule schedule ) {
+        this.schedule = schedule;
+    }
+
 }

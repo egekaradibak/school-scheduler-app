@@ -4,16 +4,12 @@ import java.util.List;
 
 public class Parent extends Person{
 
-    private List<Student> children;
     private float phoneNumber;
     private String address;
 
 
-    // Getter Methods
 
-    public List<Student> getChildren() {
-        return children;
-    }
+    // Getter Methods
 
     public float getPhoneNumber() {
         return phoneNumber;
@@ -24,10 +20,6 @@ public class Parent extends Person{
     }
 
     // Setter Methods
-
-    public void setChildren( List<Student> children ) {
-        this.children = children;
-    }
 
     public void setPhoneNumber( float phoneNumber ) {
         this.phoneNumber = phoneNumber;

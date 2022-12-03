@@ -6,8 +6,6 @@ public class Person {
     private String firstName;
     private String lastName;
     private String password;
-    private Schedule schedule;
-    private School school;
 
     // Getter Methods
 
@@ -27,13 +25,7 @@ public class Person {
         return password;
     }
 
-    public Schedule getSchedule() {
-        return schedule;
-    }
 
-    public School getSchool() {
-        return school;
-    }
     // Setter Methods
 
     public void setId( float id ) {
@@ -52,11 +44,4 @@ public class Person {
         this.password = password;
     }
 
-    public void setSchedule( Schedule schedule ) {
-        this.schedule = schedule;
-    }
-
-    public void setSchool( School school ) {
-        this.school = school;
-    }
 }
