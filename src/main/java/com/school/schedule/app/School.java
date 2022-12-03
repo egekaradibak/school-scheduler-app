@@ -1,6 +1,7 @@
 package com.school.schedule.app;
 
 public class School {
+    private String name;
     private String address;
     private String city;
     private float telephone;
@@ -9,6 +10,10 @@ public class School {
 
 
     // Getter Methods
+
+    public String getName() {
+        return name;
+    }
 
     public String getAddress() {
         return address;
@@ -31,6 +36,10 @@ public class School {
     }
 
     // Setter Methods
+
+    public void setName( String address ) {
+        this.address = address;
+    }
 
     public void setAddress( String address ) {
         this.address = address;
