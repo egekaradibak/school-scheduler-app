@@ -1,15 +1,10 @@
 package com.school.schedule.app;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class School {
     private String name;
     private String address;
     private String city;
     private float telephone;
-    private List students;
-    private List teachers;
 
     // constructor
     public School(String name, String address, String city, float telephone) {
@@ -17,9 +12,6 @@ public class School {
         this.address = address;
         this.city = city;
         this.telephone = telephone;
-        List<Student> students = new ArrayList<Student>();
-        List<Teacher> teachers = new ArrayList<Teacher>();
-
     }
 
     // Getter Methods
@@ -40,16 +32,6 @@ public class School {
         return telephone;
     }
 
-    public List getStudents() {
-        return students;
-    }
-
-    public List getTeachers() {
-        return teachers;
-    }
-
-
-
     // Setter Methods
 
     public void setName( String name ) {
@@ -67,14 +49,5 @@ public class School {
     public void setTelephone( float telephone ) {
         this.telephone = telephone;
     }
-
-    public void addStudent(Student student) {
-        students.add(student);
-    }
-
-    public void addTeacher(Teacher teacher) {
-        teachers.add(teacher);
-    }
-
 
 }
