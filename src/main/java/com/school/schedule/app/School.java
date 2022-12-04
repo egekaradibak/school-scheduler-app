@@ -1,5 +1,6 @@
 package com.school.schedule.app;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class School {
@@ -11,13 +12,14 @@ public class School {
     private List teachers;
 
     // constructor
-    public School(String name, String address, String city, float telephone,List students, List teachers) {
+    public School(String name, String address, String city, float telephone) {
         this.name = name;
         this.address = address;
         this.city = city;
         this.telephone = telephone;
-        this.students = students;
-        this.teachers = teachers;
+        List<Student> students = new ArrayList<Student>();
+        List<Teacher> teachers = new ArrayList<Teacher>();
+
     }
 
     // Getter Methods
@@ -66,14 +68,13 @@ public class School {
         this.telephone = telephone;
     }
 
-    public void setStudents( List students ) {
-        this.students = students;
+    public void addStudent(Student student) {
+        students.add(student);
     }
 
-    public void setTeachers( List teachers ) {
-        this.teachers = teachers;
+    public void addTeacher(Teacher teacher) {
+        teachers.add(teacher);
     }
-
 
 
 }
