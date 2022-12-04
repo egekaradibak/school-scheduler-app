@@ -7,6 +7,14 @@ public class Course {
     private String classroom;
     private Teacher teacher;
 
+    // constructor
+    public Course(String name, float id, String classroom, Teacher teacher) {
+        this.name = name;
+        this.id = id;
+        this.classroom = classroom;
+        this.teacher = teacher;
+    }
+
     // Getter Methods
 
     public String getName() {

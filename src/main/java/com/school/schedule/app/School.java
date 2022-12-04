@@ -6,6 +6,14 @@ public class School {
     private String city;
     private float telephone;
 
+    // constructor
+    public School(String name, String address, String city, float telephone) {
+        this.name = name;
+        this.address = address;
+        this.city = city;
+        this.telephone = telephone;
+    }
+
     // Getter Methods
 
     public String getName() {

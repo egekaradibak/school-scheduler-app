@@ -4,6 +4,12 @@ public class Teacher extends Person{
 
     private Schedule schedule;
 
+    // constructor
+    public Teacher(float id, String firstName, String lastName, Schedule schedule) {
+        super(id, firstName, lastName);
+        this.schedule = schedule;
+    }
+
     // Getter Methods
 
     public Schedule getSchedule() {
