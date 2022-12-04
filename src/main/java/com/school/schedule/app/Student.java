@@ -6,6 +6,15 @@ public class Student extends Person{
     private Schedule schedule;
     private Parent parent;
 
+    // constructor
+    public Student(float id, String firstName, String lastName, float gpa, Schedule schedule, Parent parent) {
+        super(id, firstName, lastName);
+        this.gpa = gpa;
+        this.schedule = schedule;
+        this.parent = parent;
+        this.schedule = schedule;
+    }
+
     // Getter Methods
 
     public float getGpa() {

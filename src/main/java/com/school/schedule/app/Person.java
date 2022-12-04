@@ -6,6 +6,13 @@ public class Person {
     private String firstName;
     private String lastName;
 
+    // constructor
+    public Person(float id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     // Getter Methods
 
     public float getId() {

@@ -5,6 +5,11 @@ import java.util.List;
 public class Schedule {
     private List<Course> courses;
 
+    // constructor
+    public Schedule(List<Course> courses) {
+        this.courses = courses;
+    }
+
     // Getter Methods
 
     public List<Course> getCourses() {
