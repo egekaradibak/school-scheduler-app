@@ -1,39 +1,24 @@
 package com.school.schedule.app;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
-import java.util.List;
-import java.util.Set;
-
 public class Teacher extends Person{
 
-    private List<Course> courses;
-    private Boolean isFullTime;
+    private Boolean hasTenure;
     private Schedule schedule;
 
     // Getter Methods
 
-    public List<Course> getCourses() {
-        return courses;
-    }
-
-    public Boolean getIsFullTime() {
-        return isFullTime;
+    public Boolean getHasTenure() {
+        return hasTenure;
     }
 
     public Schedule getSchedule() {
         return schedule;
     }
 
-
     // Setter Methods
 
-    public void setCourses( List<Course> courses ) {
-        this.courses = courses;
-    }
-
-    public void setIsFullTime( Boolean isFullTime ) {
-        this.isFullTime = isFullTime;
+    public void setHasTenure( Boolean hasTenure ) {
+        this.hasTenure = hasTenure;
     }
 
     public void setSchedule( Schedule schedule ) {

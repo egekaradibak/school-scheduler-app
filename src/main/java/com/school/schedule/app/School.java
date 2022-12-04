@@ -4,9 +4,6 @@ public class School {
     private String address;
     private String city;
     private float telephone;
-    private float numberOfStudents;
-    private float numberOfStaff;
-
 
     // Getter Methods
 
@@ -20,14 +17,6 @@ public class School {
 
     public float getTelephone() {
         return telephone;
-    }
-
-    public float getNumberOfStudents() {
-        return numberOfStudents;
-    }
-
-    public float getNumberOfStaff() {
-        return numberOfStaff;
     }
 
     // Setter Methods
@@ -44,11 +33,4 @@ public class School {
         this.telephone = telephone;
     }
 
-    public void setNumberOfStudents( float numberOfStudents ) {
-        this.numberOfStudents = numberOfStudents;
-    }
-
-    public void setNumberOfStaff( float numberOfStaff ) {
-        this.numberOfStaff = numberOfStaff;
-    }
 }
