@@ -5,7 +5,6 @@ public class Person {
     private float id;
     private String firstName;
     private String lastName;
-    private String password;
 
     // Getter Methods
 
@@ -21,11 +20,6 @@ public class Person {
         return lastName;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-
     // Setter Methods
 
     public void setId( float id ) {
@@ -38,10 +32,6 @@ public class Person {
 
     public void setLastName( String lastName ) {
         this.lastName = lastName;
-    }
-
-    public void setPassword( String password ) {
-        this.password = password;
     }
 
 }
