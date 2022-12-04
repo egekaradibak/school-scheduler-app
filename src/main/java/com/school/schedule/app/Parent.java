@@ -28,7 +28,7 @@ public class Parent extends Person{
         this.phoneNumber = phoneNumber;
     }
 
-    public void setIsVolunteer( boolean phoneNumber ) {
+    public void setIsVolunteer( boolean isVolunteer ) {
         this.isVolunteer = isVolunteer;
     }
 }
