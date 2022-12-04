@@ -8,8 +8,8 @@ public class School {
     private String address;
     private String city;
     private float telephone;
-    private List students;
-    private List teachers;
+    private List<Student> students;
+    private List<Teacher> teachers;
 
     // constructor
     public School(String name, String address, String city, float telephone) {
@@ -17,9 +17,8 @@ public class School {
         this.address = address;
         this.city = city;
         this.telephone = telephone;
-        List<Student> students = new ArrayList<Student>();
-        List<Teacher> teachers = new ArrayList<Teacher>();
-
+        students = new ArrayList<Student>();
+        teachers = new ArrayList<Teacher>();
     }
 
     // Getter Methods
@@ -40,15 +39,13 @@ public class School {
         return telephone;
     }
 
-    public List getStudents() {
+    public List<Student> getStudents() {
         return students;
     }
 
-    public List getTeachers() {
+    public List<Teacher> getTeachers() {
         return teachers;
     }
-
-
 
     // Setter Methods
 
