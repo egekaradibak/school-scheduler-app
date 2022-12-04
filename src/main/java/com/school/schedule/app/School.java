@@ -17,8 +17,8 @@ public class School {
         this.address = address;
         this.city = city;
         this.telephone = telephone;
-        students = new ArrayList<Student>();
-        teachers = new ArrayList<Teacher>();
+        this.students = new ArrayList<Student>();
+        this.teachers = new ArrayList<Teacher>();
     }
 
     // Getter Methods
