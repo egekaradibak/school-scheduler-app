@@ -47,6 +47,15 @@ public class School {
         return teachers;
     }
 
+    public Student getStudentById(int id){
+        for (Student student: this.students){
+            if (student.getId() == id){
+                return student;
+            }
+        }
+        return null;
+    }
+
     // Setter Methods
 
     public void setName( String name ) {
