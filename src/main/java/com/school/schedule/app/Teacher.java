@@ -5,9 +5,9 @@ public class Teacher extends Person{
     private Schedule schedule;
 
     // constructor
-    public Teacher(int id, String firstName, String lastName, Schedule schedule) {
+    public Teacher(int id, String firstName, String lastName) {
         super(id, firstName, lastName);
-        this.schedule = schedule;
+        this.schedule = new Schedule();
     }
 
     // Getter Methods
