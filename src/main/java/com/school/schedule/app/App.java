@@ -129,7 +129,7 @@ public class App
                 return false;
             }
             course = new Course(name, teacherId, classroom, null);
-            school.addCourse(existingCourse);
+            school.addCourse(course);
         } else if(optionSelected.equals("q")){
             return true;
         } else{
@@ -177,12 +177,14 @@ public class App
                 // Display courses menu options
                 quit = courseMenu(school, sc);
 
+            }else if(optionSelected.equals("q")){
+                quit = true;
             } else{
                 System.out.println( "Invalid option selected." );
                 continue;
             }
         }
-
+        System.out.println( "Goodbye!" );
         sc.close();
     }
 }
