@@ -10,6 +10,7 @@ public class School {
     private String telephone;
     private List<Student> students;
     private List<Teacher> teachers;
+    private List<Course> courses;
 
     // constructor
     public School(String name, String address, String city, String telephone) {
@@ -19,6 +20,7 @@ public class School {
         this.telephone = telephone;
         this.students = new ArrayList<Student>();
         this.teachers = new ArrayList<Teacher>();
+        this.courses = new ArrayList<Course>();
     }
 
     // Getter Methods
@@ -56,6 +58,24 @@ public class School {
         return null;
     }
 
+    public Teacher getTeacherById(int id){
+        for (Teacher teacher: this.teachers){
+            if (teacher.getId() == id){
+                return teacher;
+            }
+        }
+        return null;
+    }
+
+    public Course getCourseById(int id){
+        for (Course course: this.courses){
+            if (course.getId() == id){
+                return course;
+            }
+        }
+        return null;
+    }
+
     // Setter Methods
 
     public void setName( String name ) {
@@ -82,19 +102,28 @@ public class School {
         teachers.add(teacher);
     }
 
+    public void addCourse(Course course) {
+        courses.add(course);
+    }
+
     @Override
     public String toString(){
         String studentsList = "";
         for ( Student student : this.students){
-            studentsList += student.toString() + "\n";
+            studentsList += student.toString() + ",\n";
         }
 
         String teachersList = "";
         for ( Teacher teacher : this.teachers){
-            teachersList += teacher.toString() + "\n";
+            teachersList += teacher.toString() + ",\n";
         }
 
-        return "Name: " + this.name + "\naddress: " +  this.address + "\ncity: " +  this.city + "\nTelephone: " +  this.telephone +
-            "\nStudents: " +  studentsList + "\nTeachers: " + teachersList;
+        String coursesList = "";
+        for ( Course course : this.courses){
+            coursesList += course.toString() + ",\n";
+        }
+
+        return "\nName: " + this.name + "\n\naddress: " +  this.address + "\n\ncity: " +  this.city + "\n\nTelephone: " +  this.telephone +
+            "\n\nStudents:\n[" +  studentsList + "]\n" + "\nTeachers:\n[" + teachersList + "]\n" + "\nCourses:\n[" + coursesList + "]\n";
     }
 }

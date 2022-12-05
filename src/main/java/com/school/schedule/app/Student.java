@@ -7,10 +7,10 @@ public class Student extends Person{
     private Parent parent;
 
     // constructor
-    public Student(int id, String firstName, String lastName, float gpa, Schedule schedule, Parent parent) {
+    public Student(int id, String firstName, String lastName, float gpa, Parent parent) {
         super(id, firstName, lastName);
         this.gpa = gpa;
-        this.schedule = schedule;
+        this.schedule = new Schedule();
         this.parent = parent;
     }
 
@@ -44,8 +44,8 @@ public class Student extends Person{
 
     @Override
     public String toString(){
-        return super.toString() + "\ngpa: " +  this.gpa + "\nschedule: " +  this.schedule + 
-            "\nparent: " + this.parent;
+        return "{\n" + super.toString() + "\ngpa: " +  this.gpa + "\nschedule: " +  this.schedule + 
+            "\nparent: " + this.parent + "\n}";
     }
 
 }

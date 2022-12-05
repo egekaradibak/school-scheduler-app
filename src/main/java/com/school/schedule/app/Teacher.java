@@ -5,9 +5,9 @@ public class Teacher extends Person{
     private Schedule schedule;
 
     // constructor
-    public Teacher(int id, String firstName, String lastName, Schedule schedule) {
+    public Teacher(int id, String firstName, String lastName) {
         super(id, firstName, lastName);
-        this.schedule = schedule;
+        this.schedule = new Schedule();
     }
 
     // Getter Methods
@@ -24,7 +24,7 @@ public class Teacher extends Person{
 
     @Override
     public String toString(){
-        return super.toString() + "\nschedule: " +  this.schedule;
+        return "{\n" + super.toString() + "\nschedule: " +  this.schedule + "\n}";
     }
 
 }
