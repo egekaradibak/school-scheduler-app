@@ -2,11 +2,11 @@ package com.school.schedule.app;
 
 public class Parent extends Person{
 
-    private float phoneNumber;
+    private String phoneNumber;
     private boolean isVolunteer;
 
     // constructor
-    public Parent(float id, String firstName, String lastName, float phoneNumber, boolean isVolunteer) {
+    public Parent(int id, String firstName, String lastName, String phoneNumber, boolean isVolunteer) {
         super(id, firstName, lastName);
         this.phoneNumber = phoneNumber;
         this.isVolunteer = isVolunteer;
@@ -14,7 +14,7 @@ public class Parent extends Person{
 
     // Getter Methods
 
-    public float getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -24,7 +24,7 @@ public class Parent extends Person{
 
     // Setter Methods
 
-    public void setPhoneNumber( float phoneNumber ) {
+    public void setPhoneNumber( String phoneNumber ) {
         this.phoneNumber = phoneNumber;
     }
 

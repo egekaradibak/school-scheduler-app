@@ -2,12 +2,12 @@ package com.school.schedule.app;
 
 public class Person {
 
-    private float id;
+    private int id;
     private String firstName;
     private String lastName;
 
     // constructor
-    public Person(float id, String firstName, String lastName) {
+    public Person(int id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -15,7 +15,7 @@ public class Person {
 
     // Getter Methods
 
-    public float getId() {
+    public int getId() {
         return id;
     }
 
@@ -29,7 +29,7 @@ public class Person {
 
     // Setter Methods
 
-    public void setId( float id ) {
+    public void setId( int id ) {
         this.id = id;
     }
 
