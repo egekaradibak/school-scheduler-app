@@ -21,4 +21,13 @@ public class Schedule {
     public void setCourses( List<Course> courses ) {
         this.courses = courses;
     }
+
+    @Override
+    public String toString(){
+        String coursesString = "";
+        for ( Course course : this.courses){
+            coursesString += course.toString() + "\n";
+        }
+        return "Courses:\n" + coursesString;
+    }
 }
