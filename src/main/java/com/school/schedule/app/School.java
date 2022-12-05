@@ -74,8 +74,18 @@ public class School {
     }
 
     @Override
-    public String toString() {
-        return "Name: " + this.name + "\nAddress: " + this.address + "\nCity: " + this.city + "\nTelephone: " + this.telephone;
+    public String toString(){
+        String studentsList = "";
+        for ( Student student : this.students){
+            studentsList += student.toString() + "\n";
+        }
+
+        String teachersList = "";
+        for ( Teacher teacher : this.teachers){
+            teachersList += teacher.toString() + "\n";
+        }
+
+        return "Name: " + this.name + "\naddress: " +  this.address + "\ncity: " +  this.city + "\nTelephone: " +  this.telephone +
+            "\nStudents: " +  studentsList + "\nTeachers: " + teachersList;
     }
-    
 }

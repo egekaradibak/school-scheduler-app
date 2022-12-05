@@ -12,7 +12,6 @@ public class Student extends Person{
         this.gpa = gpa;
         this.schedule = schedule;
         this.parent = parent;
-        this.schedule = schedule;
     }
 
     // Getter Methods
@@ -41,6 +40,12 @@ public class Student extends Person{
 
     public void setParent( Parent parent ) {
         this.parent = parent;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() + "\ngpa: " +  this.gpa + "\nschedule: " +  this.schedule + 
+            "\nparent: " + this.parent;
     }
 
 }

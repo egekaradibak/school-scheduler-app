@@ -22,4 +22,9 @@ public class Teacher extends Person{
         this.schedule = schedule;
     }
 
+    @Override
+    public String toString(){
+        return super.toString() + "\nschedule: " +  this.schedule;
+    }
+
 }
