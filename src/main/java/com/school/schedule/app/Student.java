@@ -44,8 +44,8 @@ public class Student extends Person{
 
     @Override
     public String toString(){
-        return super.toString() + "\ngpa: " +  this.gpa + "\nschedule: " +  this.schedule + 
-            "\nparent: " + this.parent;
+        return "{\n" + super.toString() + "\ngpa: " +  this.gpa + "\nschedule: " +  this.schedule + 
+            "\nparent: " + this.parent + "\n}";
     }
 
 }

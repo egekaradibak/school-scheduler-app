@@ -53,6 +53,6 @@ public class Course {
 
     @Override
     public String toString(){
-        return "Name: " + this.name + "\nID: " +  this.id + "\nClassroom: " +  this.classroom + "\nTeacher: " +  this.teacher;
+        return "{\nName: " + this.name + "\nID: " +  this.id + "\nClassroom: " +  this.classroom + "\nTeacher: " +  this.teacher + "\n}";
     }
 }

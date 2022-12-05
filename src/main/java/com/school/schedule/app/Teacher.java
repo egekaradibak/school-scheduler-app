@@ -24,7 +24,7 @@ public class Teacher extends Person{
 
     @Override
     public String toString(){
-        return super.toString() + "\nschedule: " +  this.schedule;
+        return "{\n" + super.toString() + "\nschedule: " +  this.schedule + "\n}";
     }
 
 }

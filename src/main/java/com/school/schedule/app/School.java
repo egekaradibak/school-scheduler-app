@@ -110,17 +110,17 @@ public class School {
     public String toString(){
         String studentsList = "";
         for ( Student student : this.students){
-            studentsList += "[" + student.toString() + "],\n";
+            studentsList += student.toString() + ",\n";
         }
 
         String teachersList = "";
         for ( Teacher teacher : this.teachers){
-            teachersList += "[" +  teacher.toString() + "],\n";
+            teachersList += teacher.toString() + ",\n";
         }
 
         String coursesList = "";
         for ( Course course : this.courses){
-            coursesList += "[" +  course.toString() + "],\n";
+            coursesList += course.toString() + ",\n";
         }
 
         return "\nName: " + this.name + "\n\naddress: " +  this.address + "\n\ncity: " +  this.city + "\n\nTelephone: " +  this.telephone +

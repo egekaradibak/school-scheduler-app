@@ -3,7 +3,7 @@ package com.school.schedule.app;
 import java.util.Scanner; 
 
 public class App 
-{ 
+{
     private static boolean studentMenu(School school, Scanner sc){
         System.out.println( "\nSTUDENT MENU" );
         System.out.println( "\nPlease select an option by entering the number." );
@@ -36,6 +36,7 @@ public class App
             String lastname = sc.nextLine(); 
             System.out.print( "GPA: " );
             float gpa = sc.nextFloat();
+            sc.nextLine();
 
             Student existingStudent = school.getStudentById(id);
             if (existingStudent != null){
@@ -77,12 +78,15 @@ public class App
 
         } else if(optionSelected.equals("2")){
             // Add a parent
+            addParentToStudent(student, sc);
         } else if(optionSelected.equals("q")){
             return true;
         } else{
             System.out.println( "Invalid option selected." );
             return false;
         }
+
+        System.out.println( "\n-----------------------------\nUpdated Student Information:\n" + student + "\n-----------------------------");
 
         return false;
     }
@@ -140,6 +144,25 @@ public class App
         System.out.println( "\n-----------------------------\nCourse Information:\n" + course + "\n-----------------------------");
         return false;
     }
+
+    private static void addParentToStudent(Student student, Scanner sc){
+        System.out.println( "\nPlease follow the prompts to enter information about the parent." );
+        System.out.print( "ID: " );
+        int id = sc.nextInt();
+        sc.nextLine();
+        System.out.print( "First name: " );
+        String firstName = sc.nextLine();
+        System.out.print( "Last name: " );
+        String lastname = sc.nextLine(); 
+        System.out.print( "Phone number: " );
+        String phoneNumber = sc.nextLine(); 
+        System.out.print( "Volunteer status (True/False): " );
+        Boolean isVolunteer = sc.nextBoolean();
+        sc.nextLine();
+
+        Parent parent = new Parent(id, firstName, lastname, phoneNumber, isVolunteer);
+        student.setParent(parent);
+    }
     public static void main( String[] args )
     {   
         System.out.println( "Welcome to the School Scheduler App! " );
@@ -181,7 +204,12 @@ public class App
                 quit = true;
             } else{
                 System.out.println( "Invalid option selected." );
-                continue;
+            }
+
+            if (!quit){
+                System.out.print( "Press enter key to continue " );
+                System.out.flush();
+                sc.nextLine(); 
             }
         }
         System.out.println( "Goodbye!" );

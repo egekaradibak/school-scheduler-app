@@ -34,6 +34,6 @@ public class Parent extends Person{
 
     @Override
     public String toString(){
-        return super.toString() + "\nPhoneNumber: " +  this.phoneNumber + "\nisVolunteer: " +  this.isVolunteer;
+        return "{\n" + super.toString() + "\nPhoneNumber: " +  this.phoneNumber + "\nisVolunteer: " +  this.isVolunteer + "\n}";
     }
 }
