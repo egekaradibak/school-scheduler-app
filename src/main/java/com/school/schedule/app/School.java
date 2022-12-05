@@ -118,7 +118,12 @@ public class School {
             teachersList += "[" +  teacher.toString() + "],\n";
         }
 
+        String coursesList = "";
+        for ( Course course : this.courses){
+            coursesList += "[" +  course.toString() + "],\n";
+        }
+
         return "\nName: " + this.name + "\n\naddress: " +  this.address + "\n\ncity: " +  this.city + "\n\nTelephone: " +  this.telephone +
-            "\n\nStudents:\n[" +  studentsList + "]\n" + "\n\nTeachers:\n[" + teachersList + "]\n" ;
+            "\n\nStudents:\n[" +  studentsList + "]\n" + "\n\nTeachers:\n[" + teachersList + "]\n" + "\n\nCourses:\n[" + coursesList + "]\n";
     }
 }
