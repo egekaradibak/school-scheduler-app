@@ -10,6 +10,7 @@ public class School {
     private String telephone;
     private List<Student> students;
     private List<Teacher> teachers;
+    private List<Course> courses;
 
     // constructor
     public School(String name, String address, String city, String telephone) {
@@ -19,6 +20,7 @@ public class School {
         this.telephone = telephone;
         this.students = new ArrayList<Student>();
         this.teachers = new ArrayList<Teacher>();
+        this.courses = new ArrayList<Course>();
     }
 
     // Getter Methods
@@ -56,6 +58,24 @@ public class School {
         return null;
     }
 
+    public Teacher getTeacherById(int id){
+        for (Teacher teacher: this.teachers){
+            if (teacher.getId() == id){
+                return teacher;
+            }
+        }
+        return null;
+    }
+
+    public Course getCourseById(int id){
+        for (Course course: this.courses){
+            if (course.getId() == id){
+                return course;
+            }
+        }
+        return null;
+    }
+
     // Setter Methods
 
     public void setName( String name ) {
@@ -80,6 +100,10 @@ public class School {
 
     public void addTeacher(Teacher teacher) {
         teachers.add(teacher);
+    }
+
+    public void addCourse(Course course) {
+        courses.add(course);
     }
 
     @Override
