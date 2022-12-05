@@ -7,12 +7,12 @@ public class School {
     private String name;
     private String address;
     private String city;
-    private float telephone;
+    private String telephone;
     private List<Student> students;
     private List<Teacher> teachers;
 
     // constructor
-    public School(String name, String address, String city, float telephone) {
+    public School(String name, String address, String city, String telephone) {
         this.name = name;
         this.address = address;
         this.city = city;
@@ -35,7 +35,7 @@ public class School {
         return city;
     }
 
-    public float getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
@@ -61,7 +61,7 @@ public class School {
         this.city = city;
     }
 
-    public void setTelephone( float telephone ) {
+    public void setTelephone( String telephone ) {
         this.telephone = telephone;
     }
 
