@@ -22,6 +22,10 @@ public class Schedule {
         this.courses = courses;
     }
 
+    public void addCourse(Course course) {
+        this.courses.add(course);
+    }
+
     @Override
     public String toString(){
         String coursesString = "";
