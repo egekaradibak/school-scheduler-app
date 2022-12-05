@@ -124,6 +124,6 @@ public class School {
         }
 
         return "\nName: " + this.name + "\n\naddress: " +  this.address + "\n\ncity: " +  this.city + "\n\nTelephone: " +  this.telephone +
-            "\n\nStudents:\n[" +  studentsList + "]\n" + "\n\nTeachers:\n[" + teachersList + "]\n" + "\n\nCourses:\n[" + coursesList + "]\n";
+            "\n\nStudents:\n[" +  studentsList + "]\n" + "\nTeachers:\n[" + teachersList + "]\n" + "\nCourses:\n[" + coursesList + "]\n";
     }
 }

@@ -64,17 +64,10 @@ public class App
 
         if (optionSelected.equals("1")){
             // Add a course
-            Course course;
-            System.out.println( "\nPlease enter the course ID." );
-            System.out.print( "ID: " );
-            int id = sc.nextInt();
-            sc.nextLine();
-            course = school.getCourseById(id);
-            if (course == null){
-                System.out.println( "\nERROR: A course with id " + id + " does not exist.\n");
-                return false;
+            Course course = getCourse(school,sc);
+            if (course != null){
+                student.getSchedule().addCourse(course);
             }
-            student.getSchedule().addCourse(course);
 
         } else if(optionSelected.equals("2")){
             // Add a parent
@@ -87,7 +80,6 @@ public class App
         }
 
         System.out.println( "\n-----------------------------\nUpdated Student Information:\n" + student + "\n-----------------------------");
-
         return false;
     }
 
@@ -103,13 +95,8 @@ public class App
 
         if (optionSelected.equals("1")){
             // Select a course
-            System.out.println( "\nPlease enter the course ID." );
-            System.out.print( "ID: " );
-            int id = sc.nextInt();
-            sc.nextLine();
-            course = school.getCourseById(id);
+            course = getCourse(school,sc);
             if (course == null){
-                System.out.println( "\nERROR: A course with id " + id + " does not exist.\n");
                 return false;
             }
         } else if(optionSelected.equals("2")){
@@ -163,6 +150,18 @@ public class App
         Parent parent = new Parent(id, firstName, lastname, phoneNumber, isVolunteer);
         student.setParent(parent);
     }
+
+    private static Course getCourse(School school, Scanner sc){
+        System.out.println( "\nPlease enter the course ID." );
+        System.out.print( "ID: " );
+        int id = sc.nextInt();
+        sc.nextLine();
+        Course course = school.getCourseById(id);
+        if (course == null){
+            System.out.println( "\nERROR: A course with id " + id + " does not exist.\n");
+        }
+        return course;
+    }
     public static void main( String[] args )
     {   
         System.out.println( "Welcome to the School Scheduler App! " );
@@ -208,7 +207,6 @@ public class App
 
             if (!quit){
                 System.out.print( "Press enter key to continue " );
-                System.out.flush();
                 sc.nextLine(); 
             }
         }
