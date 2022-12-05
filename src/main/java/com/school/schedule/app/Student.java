@@ -7,7 +7,7 @@ public class Student extends Person{
     private Parent parent;
 
     // constructor
-    public Student(float id, String firstName, String lastName, float gpa, Schedule schedule, Parent parent) {
+    public Student(int id, String firstName, String lastName, float gpa, Schedule schedule, Parent parent) {
         super(id, firstName, lastName);
         this.gpa = gpa;
         this.schedule = schedule;

@@ -3,12 +3,12 @@ package com.school.schedule.app;
 public class Course {
 
     private String name;
-    private float id;
+    private int id;
     private String classroom;
     private Teacher teacher;
 
     // constructor
-    public Course(String name, float id, String classroom, Teacher teacher) {
+    public Course(String name, int id, String classroom, Teacher teacher) {
         this.name = name;
         this.id = id;
         this.classroom = classroom;
@@ -21,7 +21,7 @@ public class Course {
         return name;
     }
 
-    public float getId() {
+    public int getId() {
         return id;
     }
 
@@ -39,7 +39,7 @@ public class Course {
         this.name = name;
     }
 
-    public void setId( float id ) {
+    public void setId( int id ) {
         this.id = id;
     }
 
