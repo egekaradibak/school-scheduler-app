@@ -30,14 +30,25 @@ jobs:
       - run:
           name: Test
           command: mvn test
-  build:
-    docker:
-      - image: 'node:latest'
-      - projectKey: egekaradibak_school-scheduler-app
-      - organization: egekaradibak
+  analysis:
+    runs-on: ubuntu-latest
+
     steps:
-      - checkout
-      - sonarcloud/scan
+      - name: Analyze with SonarCloud
+
+        # You can pin the exact commit or the version.
+        # uses: SonarSource/sonarcloud-github-action@de2e56b42aa84d0b1c5b622644ac17e505c9a049
+        uses: SonarSource/sonarcloud-github-action@de2e56b42aa84d0b1c5b622644ac17e505c9a049
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}   # Generate a token on Sonarcloud.io, add it to the secrets of this repo with the name SONAR_TOKEN (Settings > Secrets > Actions > add new repository secret)
+        with:
+          # Additional arguments for the sonarcloud scanner
+          args:
+            # Unique keys of your project and organization. You can find them in SonarCloud > Information (bottom-left menu)
+            # mandatory
+            -Dsonar.projectKey=egekaradibak_school-scheduler-app
+            -Dsonar.organization=egekaradibak
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -46,5 +57,4 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build-and-test
-      - build:
-          context: sonarcloud
+      - analysis
