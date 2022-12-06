@@ -1,5 +1,7 @@
 # school-scheduler-app
 
+The School Scheduler App allows you to store and manipulate data about several components of a School.
+
 ## Run instructions
 
 From the project directory, run
