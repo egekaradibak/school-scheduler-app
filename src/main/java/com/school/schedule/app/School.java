@@ -49,6 +49,11 @@ public class School {
         return teachers;
     }
 
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+
     public Student getStudentById(int id){
         for (Student student: this.students){
             if (student.getId() == id){
