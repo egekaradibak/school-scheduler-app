@@ -33,6 +33,8 @@ jobs:
   build:
     docker:
       - image: 'node:latest'
+      - projectKey: 'egekaradibak_school-scheduler-app'
+      - organization: 'egekaradibak'
     steps:
       - checkout
       - sonarcloud/scan
